@@ -19,7 +19,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: code-coverage-report
-          path: /reports/awesome-reports/mochawesome.html
+          path: /home/runner/work/quick-example-of-testing-in-nodejs/quick-example-of-testing-in-nodejs/reports/awesome-reports/mochawesome.html
     
  
 
