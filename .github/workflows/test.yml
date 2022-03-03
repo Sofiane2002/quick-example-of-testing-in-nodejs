@@ -1,0 +1,29 @@
+name: Test
+
+on: push
+# On declare des processus de travail
+jobs: 
+  # On donne un nom à notre job
+  nodeJS: 
+    runs-on: ubuntu-latest
+    # On declare les taches que notre processus va executer
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '16'
+      - run: npm install
+      - run: npm test
+    
+  Build:
+    needs: nodeJS
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: je demarre le test
+        run: npm test 
+ 
+
+
+
+
