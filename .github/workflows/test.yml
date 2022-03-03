@@ -14,14 +14,9 @@ jobs:
           node-version: '16'
       - run: npm install
       - run: npm test
+      - run: npm run cover 
+     
     
-  Build:
-    needs: nodeJS
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: je demarre le test
-        run: npm test 
  
 
 
