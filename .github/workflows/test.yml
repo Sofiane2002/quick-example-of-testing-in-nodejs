@@ -8,18 +8,20 @@ jobs:
     runs-on: ubuntu-latest
     # On declare les taches que notre processus va executer
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v2
+      - name: Recuperation du répo
+        uses: actions/checkout@v2
+      - name: Installation de nodeJS
+        uses: actions/setup-node@v2
         with:
           node-version: '16'
       - run: npm install
       - run: npm test
       - run: npm run cover 
-      - name: Archive code coverage results
+      - name: Recuperation du rapport
         uses: actions/upload-artifact@v2
         with:
           name: code-coverage-report
-          path: ./reports/awesome-reports/mochawesome.html
+          path: ./reports/**
     
  
 
