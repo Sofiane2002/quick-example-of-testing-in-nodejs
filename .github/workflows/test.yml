@@ -45,7 +45,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: ${{secrets.USERNAME_DOCKER}}/weather:$APP_VERSION
+          tags: ${{secrets.USERNAME_DOCKER}}/weather:${{env.APP_VERSION}}
     
  
 
